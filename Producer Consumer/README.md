@@ -1,2 +1,3 @@
 # Producer-Consumer
 
+The code was parallelizedwith omp. Since the for loops responsible for the thread operations are internal to another loop, in order not to create new threads and destroy them at each iteration of the code section increasing time as well as memory usage, we used a pragma omp parallel in the outermost loop and pragma for internally. In order to ensure correct code operation and alignment of the threads and their information, the buffer and vec structures had to be declared as shared and the variables i and j as individual for each thread. Finally, the reduction was used to synchronize the sum of the previous operations.
