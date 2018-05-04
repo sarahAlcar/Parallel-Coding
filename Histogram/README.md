@@ -1,0 +1,2 @@
+# Parallel Histogram
+The code was parallelized using Pthreads. Pthreads requires the serial code variables to become global. IN order to calculate the histogram using many threads each thread needs to know their working scope so that information do not get mixed up. In this manner, it must be created two variables that indicate the first and last elements of the scope. To do this calculation it is also necessary to determine the number os bins for each thread. 
