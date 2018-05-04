@@ -1,1 +1,4 @@
+# Parallel counting sort
 
+The code was parallelized using omp. Therefore, as the external for loop, responsible for going the next step of the ordered vector, can be parallelized,in order to accomplish this task it is necessary to guarantee the consistency of the variables that participate in the process. To do this, you must first use the 'parallel for' command to break the 
+operation into sets. Subsequently, it is necessary to individuate for each thread the variables (i, j, count), that is, each thread will have access to its own local variables. In order to synchronize the results and generate a correct response, at the end of the process, it is also necessary to declare (a, temp) as shared variables, that is, during execution the threads need to know that it is not an individual instance.
