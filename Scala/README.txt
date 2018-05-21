@@ -1,3 +1,0 @@
-# Scala text analyzer
-
-This code is for basic text parsing using Spark. The first part of the program counts the words and prints on the standard output the 5 words of more than 3 letters that have the highest occurrences in descending order for each text. The program considers uppercase and lowercase letters as being the same letter, and also ignore punctuation characters to count the occurrences (using replaceAll ("[,.!?:;]", "")). In the second part, the program compares the analyzes of the two texts, and prints in alphabetical order all the words that appear more than 100 times in each of the two texts.
